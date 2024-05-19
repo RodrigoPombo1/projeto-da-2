@@ -1,0 +1,412 @@
+\doxysection{request Class Reference}
+\hypertarget{classrequest}{}\label{classrequest}\index{request@{request}}
+
+
+{\ttfamily \#include $<$request.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrequest_1_1compare}{compare}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrequest_ae49e0b00a54017889a18e955b88087f6}{request}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the request constructor complexity\+: O(1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequest_acad45f0fdbbf354731f8cb4a3f45d7e6}{set\+Graph\+Type\+To\+Read}} (int \mbox{\hyperlink{classrequest_ada91dc3ca38c296fd14ada5aff5ff964}{graph\+\_\+type}})
+\begin{DoxyCompactList}\small\item\em Sets the graph type to read complexity\+: O(1) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrequest_a0e287e75f8e406be312dda3e996f859c}{get\+Graph\+Type\+To\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Gets the graph type to read complexity\+: O(1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequest_aa2fb2f15a325bdb874f2996ee48871cb}{set\+Graph\+File}} (int graph\+\_\+file\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Sets the graph file complexity\+: O(1) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrequest_a8c5e589d2bfa855cac54bf7fbcfe1932}{get\+Graph\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the graph type complexity\+: O(1) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_aabce954e23476599157e42a69849db04}{print\+\_\+result\+\_\+backtracking}} (int starting\+\_\+node=0)
+\begin{DoxyCompactList}\small\item\em Gets the written result of the recursive backtracking algorithm from a starting node complexity\+: O(n!) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_ab41b104106f47958fbd98ab12d6a4f0c}{print\+\_\+result\+\_\+greedy\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets the written result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_a387181c24d056604f5609bce39a227f5}{print\+\_\+result\+\_\+christofides\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets the written result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classrequest_aa9b1dbd961d773c5937246fd2e5a6ae0}{distance}} (int node1\+\_\+id, int node2\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Gets the distance between two nodes complexity\+: O(1) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classrequest_a405be17727a6fb09139d50f97c40ec3a}{calculate\+\_\+distance\+\_\+between\+\_\+two\+\_\+nodes}} (\mbox{\hyperlink{classnode}{node}} node1, \mbox{\hyperlink{classnode}{node}} node2)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two nodes complexity\+: O(1) \end{DoxyCompactList}\item 
+std\+::pair$<$ double, std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classrequest_a150249b7ef65bab42d2e1a94e990ece9}{recursive\+\_\+backtracking\+\_\+start}} (int starting\+\_\+node=0)
+\begin{DoxyCompactList}\small\item\em Gets the result of the recursive backtracking algorithm from a starting node complexity\+: O(n!) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::pair$<$ double, std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classrequest_abc19b384e3c202ff35a3e715b7a411fe}{recursive\+\_\+backtracking}} (int previous\+\_\+node, std\+::vector$<$ std\+::pair$<$ int, bool $>$ $>$ nodes\+\_\+not\+\_\+used\+\_\+in\+\_\+this\+\_\+path, int starting\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Recursive backtracking algorithm to find the shortest path complexity\+: O(n!) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classrequest_a1d986ad4c76ce7206b7cddbd003a045c}{prim\+\_\+\+MST}} (std\+::vector$<$ std\+::pair$<$ int, bool $>$ $>$ nodes)
+\begin{DoxyCompactList}\small\item\em Gets Minimum Spanning Tree using Prim\textquotesingle{}s MST algorithm complexity\+: O(nlog(n)) (n = number of nodes) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequest_aedc2df831dc4dd0c5371d78c7adddffa}{pre\+\_\+order\+\_\+walk}} (int u, const std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&mst, std\+::vector$<$ bool $>$ \&visited, std\+::vector$<$ int $>$ \&tour)
+\begin{DoxyCompactList}\small\item\em Pre-\/order walk of the Minimum Spanning Tree complexity\+: O(n) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_acca9536c97c22d60749ce933511229ac}{greedy\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets the result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_a3501d36360d3fd95ae2c21a7d2350d4b}{christofides\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets the result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{classrequest_a258468e4f799898b64e11f39fa9c3aed}{minimum\+\_\+weight\+\_\+perfect\+\_\+matching\+\_\+brute\+\_\+force}} (std\+::vector$<$ int $>$ odd\+\_\+degree\+\_\+vertices)
+\begin{DoxyCompactList}\small\item\em Gets the minimum weight perfect matching using brute force complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_a071efa1f215b3a92c0fdf33cd5ddce9b}{eulerian\+\_\+tour}} (int starting\+\_\+node, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ multi\+\_\+graph)
+\begin{DoxyCompactList}\small\item\em Gets the Eulerian tour complexity\+: O(n) (n = number of nodes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcsv__reader}{csv\+\_\+reader}} \mbox{\hyperlink{classrequest_aeeee43e9d8498f6315966f576ce20dc1}{csv\+Reader}}
+\item 
+int \mbox{\hyperlink{classrequest_ada91dc3ca38c296fd14ada5aff5ff964}{graph\+\_\+type}}
+\item 
+int \mbox{\hyperlink{classrequest_ae3b09b211c93e9bdc7ea2523ef28b442}{graph\+\_\+type\+\_\+to\+\_\+read}}
+\item 
+int \mbox{\hyperlink{classrequest_a57f65703c1f9b452b4cdb064ac68dca1}{number\+\_\+of\+\_\+nodes}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classnode}{node}} $>$ \mbox{\hyperlink{classrequest_ad704bbe35ec7d283802933546c32acdc}{real\+\_\+world\+\_\+nodes}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classrequest_af6ae408dcb22585f1ddd9aa192aa14fa}{edges}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrequest_ae49e0b00a54017889a18e955b88087f6}\label{classrequest_ae49e0b00a54017889a18e955b88087f6} 
+\index{request@{request}!request@{request}}
+\index{request@{request}!request@{request}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request\+::request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the request constructor complexity\+: O(1) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrequest_a405be17727a6fb09139d50f97c40ec3a}\label{classrequest_a405be17727a6fb09139d50f97c40ec3a} 
+\index{request@{request}!calculate\_distance\_between\_two\_nodes@{calculate\_distance\_between\_two\_nodes}}
+\index{calculate\_distance\_between\_two\_nodes@{calculate\_distance\_between\_two\_nodes}!request@{request}}
+\doxysubsubsection{\texorpdfstring{calculate\_distance\_between\_two\_nodes()}{calculate\_distance\_between\_two\_nodes()}}
+{\footnotesize\ttfamily double request\+::calculate\+\_\+distance\+\_\+between\+\_\+two\+\_\+nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{node1,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{node2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the distance between two nodes complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & the first node \\
+\hline
+{\em node2} & the second node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between the two nodes 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a3501d36360d3fd95ae2c21a7d2350d4b}\label{classrequest_a3501d36360d3fd95ae2c21a7d2350d4b} 
+\index{request@{request}!christofides\_heuristic@{christofides\_heuristic}}
+\index{christofides\_heuristic@{christofides\_heuristic}!request@{request}}
+\doxysubsubsection{\texorpdfstring{christofides\_heuristic()}{christofides\_heuristic()}}
+{\footnotesize\ttfamily vector$<$ int $>$ request\+::christofides\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) 
+
+\begin{DoxyReturn}{Returns}
+the result of the Christofides heuristic algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_aa9b1dbd961d773c5937246fd2e5a6ae0}\label{classrequest_aa9b1dbd961d773c5937246fd2e5a6ae0} 
+\index{request@{request}!distance@{distance}}
+\index{distance@{distance}!request@{request}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double request\+::distance (\begin{DoxyParamCaption}\item[{int}]{node1\+\_\+id,  }\item[{int}]{node2\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the distance between two nodes complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1\+\_\+id} & the ID of the first node \\
+\hline
+{\em node2\+\_\+id} & the ID of the second node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between the two nodes 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a071efa1f215b3a92c0fdf33cd5ddce9b}\label{classrequest_a071efa1f215b3a92c0fdf33cd5ddce9b} 
+\index{request@{request}!eulerian\_tour@{eulerian\_tour}}
+\index{eulerian\_tour@{eulerian\_tour}!request@{request}}
+\doxysubsubsection{\texorpdfstring{eulerian\_tour()}{eulerian\_tour()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ request\+::eulerian\+\_\+tour (\begin{DoxyParamCaption}\item[{int}]{starting\+\_\+node,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{multi\+\_\+graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the Eulerian tour complexity\+: O(n) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em starting\+\_\+node} & the starting node \\
+\hline
+{\em multi\+\_\+graph} & the multi graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Eulerian tour 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a8c5e589d2bfa855cac54bf7fbcfe1932}\label{classrequest_a8c5e589d2bfa855cac54bf7fbcfe1932} 
+\index{request@{request}!getGraphType@{getGraphType}}
+\index{getGraphType@{getGraphType}!request@{request}}
+\doxysubsubsection{\texorpdfstring{getGraphType()}{getGraphType()}}
+{\footnotesize\ttfamily int request\+::get\+Graph\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the graph type complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the graph type 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a0e287e75f8e406be312dda3e996f859c}\label{classrequest_a0e287e75f8e406be312dda3e996f859c} 
+\index{request@{request}!getGraphTypeToRead@{getGraphTypeToRead}}
+\index{getGraphTypeToRead@{getGraphTypeToRead}!request@{request}}
+\doxysubsubsection{\texorpdfstring{getGraphTypeToRead()}{getGraphTypeToRead()}}
+{\footnotesize\ttfamily int request\+::get\+Graph\+Type\+To\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the graph type to read complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the graph type to read 
+\end{DoxyReturn}
+\Hypertarget{classrequest_acca9536c97c22d60749ce933511229ac}\label{classrequest_acca9536c97c22d60749ce933511229ac} 
+\index{request@{request}!greedy\_heuristic@{greedy\_heuristic}}
+\index{greedy\_heuristic@{greedy\_heuristic}!request@{request}}
+\doxysubsubsection{\texorpdfstring{greedy\_heuristic()}{greedy\_heuristic()}}
+{\footnotesize\ttfamily vector$<$ int $>$ request\+::greedy\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) 
+
+\begin{DoxyReturn}{Returns}
+the result of the greedy heuristic algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a258468e4f799898b64e11f39fa9c3aed}\label{classrequest_a258468e4f799898b64e11f39fa9c3aed} 
+\index{request@{request}!minimum\_weight\_perfect\_matching\_brute\_force@{minimum\_weight\_perfect\_matching\_brute\_force}}
+\index{minimum\_weight\_perfect\_matching\_brute\_force@{minimum\_weight\_perfect\_matching\_brute\_force}!request@{request}}
+\doxysubsubsection{\texorpdfstring{minimum\_weight\_perfect\_matching\_brute\_force()}{minimum\_weight\_perfect\_matching\_brute\_force()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ request\+::minimum\+\_\+weight\+\_\+perfect\+\_\+matching\+\_\+brute\+\_\+force (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{odd\+\_\+degree\+\_\+vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the minimum weight perfect matching using brute force complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em odd\+\_\+degree\+\_\+vertices} & the odd degree vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the minimum weight perfect matching 
+\end{DoxyReturn}
+\Hypertarget{classrequest_aedc2df831dc4dd0c5371d78c7adddffa}\label{classrequest_aedc2df831dc4dd0c5371d78c7adddffa} 
+\index{request@{request}!pre\_order\_walk@{pre\_order\_walk}}
+\index{pre\_order\_walk@{pre\_order\_walk}!request@{request}}
+\doxysubsubsection{\texorpdfstring{pre\_order\_walk()}{pre\_order\_walk()}}
+{\footnotesize\ttfamily void request\+::pre\+\_\+order\+\_\+walk (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{const std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&}]{mst,  }\item[{std\+::vector$<$ bool $>$ \&}]{visited,  }\item[{std\+::vector$<$ int $>$ \&}]{tour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pre-\/order walk of the Minimum Spanning Tree complexity\+: O(n) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+node} & the current node \\
+\hline
+{\em mst} & the Minimum Spanning Tree \\
+\hline
+{\em visited} & the visited nodes \\
+\hline
+{\em tour} & the tour \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classrequest_a1d986ad4c76ce7206b7cddbd003a045c}\label{classrequest_a1d986ad4c76ce7206b7cddbd003a045c} 
+\index{request@{request}!prim\_MST@{prim\_MST}}
+\index{prim\_MST@{prim\_MST}!request@{request}}
+\doxysubsubsection{\texorpdfstring{prim\_MST()}{prim\_MST()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ request\+::prim\+\_\+\+MST (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ int, bool $>$ $>$}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets Minimum Spanning Tree using Prim\textquotesingle{}s MST algorithm complexity\+: O(nlog(n)) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & the nodes to be used in the MST \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Minimum Spanning Tree 
+\end{DoxyReturn}
+\Hypertarget{classrequest_aabce954e23476599157e42a69849db04}\label{classrequest_aabce954e23476599157e42a69849db04} 
+\index{request@{request}!print\_result\_backtracking@{print\_result\_backtracking}}
+\index{print\_result\_backtracking@{print\_result\_backtracking}!request@{request}}
+\doxysubsubsection{\texorpdfstring{print\_result\_backtracking()}{print\_result\_backtracking()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ request\+::print\+\_\+result\+\_\+backtracking (\begin{DoxyParamCaption}\item[{int}]{starting\+\_\+node = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Gets the written result of the recursive backtracking algorithm from a starting node complexity\+: O(n!) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em starting\+\_\+node} & the starting node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the written result of the recursive backtracking algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a387181c24d056604f5609bce39a227f5}\label{classrequest_a387181c24d056604f5609bce39a227f5} 
+\index{request@{request}!print\_result\_christofides\_heuristic@{print\_result\_christofides\_heuristic}}
+\index{print\_result\_christofides\_heuristic@{print\_result\_christofides\_heuristic}!request@{request}}
+\doxysubsubsection{\texorpdfstring{print\_result\_christofides\_heuristic()}{print\_result\_christofides\_heuristic()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ request\+::print\+\_\+result\+\_\+christofides\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the written result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) 
+
+\begin{DoxyReturn}{Returns}
+the written result of the Christofides heuristic algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_ab41b104106f47958fbd98ab12d6a4f0c}\label{classrequest_ab41b104106f47958fbd98ab12d6a4f0c} 
+\index{request@{request}!print\_result\_greedy\_heuristic@{print\_result\_greedy\_heuristic}}
+\index{print\_result\_greedy\_heuristic@{print\_result\_greedy\_heuristic}!request@{request}}
+\doxysubsubsection{\texorpdfstring{print\_result\_greedy\_heuristic()}{print\_result\_greedy\_heuristic()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ request\+::print\+\_\+result\+\_\+greedy\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the written result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) 
+
+\begin{DoxyReturn}{Returns}
+the written result of the greedy heuristic algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_abc19b384e3c202ff35a3e715b7a411fe}\label{classrequest_abc19b384e3c202ff35a3e715b7a411fe} 
+\index{request@{request}!recursive\_backtracking@{recursive\_backtracking}}
+\index{recursive\_backtracking@{recursive\_backtracking}!request@{request}}
+\doxysubsubsection{\texorpdfstring{recursive\_backtracking()}{recursive\_backtracking()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, std\+::vector$<$ int $>$ $>$ request\+::recursive\+\_\+backtracking (\begin{DoxyParamCaption}\item[{int}]{previous\+\_\+node,  }\item[{std\+::vector$<$ std\+::pair$<$ int, bool $>$ $>$}]{nodes\+\_\+not\+\_\+used\+\_\+in\+\_\+this\+\_\+path,  }\item[{int}]{starting\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recursive backtracking algorithm to find the shortest path complexity\+: O(n!) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em previous\+\_\+node} & the previous node \\
+\hline
+{\em nodes} & the nodes not used in this path \\
+\hline
+{\em starting\+\_\+node} & the starting node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the shortest path 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a150249b7ef65bab42d2e1a94e990ece9}\label{classrequest_a150249b7ef65bab42d2e1a94e990ece9} 
+\index{request@{request}!recursive\_backtracking\_start@{recursive\_backtracking\_start}}
+\index{recursive\_backtracking\_start@{recursive\_backtracking\_start}!request@{request}}
+\doxysubsubsection{\texorpdfstring{recursive\_backtracking\_start()}{recursive\_backtracking\_start()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, std\+::vector$<$ int $>$ $>$ request\+::recursive\+\_\+backtracking\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{starting\+\_\+node = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the result of the recursive backtracking algorithm from a starting node complexity\+: O(n!) (n = number of nodes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em starting\+\_\+node} & the starting node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the recursive backtracking algorithm 
+\end{DoxyReturn}
+\Hypertarget{classrequest_aa2fb2f15a325bdb874f2996ee48871cb}\label{classrequest_aa2fb2f15a325bdb874f2996ee48871cb} 
+\index{request@{request}!setGraphFile@{setGraphFile}}
+\index{setGraphFile@{setGraphFile}!request@{request}}
+\doxysubsubsection{\texorpdfstring{setGraphFile()}{setGraphFile()}}
+{\footnotesize\ttfamily void request\+::set\+Graph\+File (\begin{DoxyParamCaption}\item[{int}]{graph\+\_\+file\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Sets the graph file complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+\_\+file\+\_\+index} & the graph file index \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classrequest_acad45f0fdbbf354731f8cb4a3f45d7e6}\label{classrequest_acad45f0fdbbf354731f8cb4a3f45d7e6} 
+\index{request@{request}!setGraphTypeToRead@{setGraphTypeToRead}}
+\index{setGraphTypeToRead@{setGraphTypeToRead}!request@{request}}
+\doxysubsubsection{\texorpdfstring{setGraphTypeToRead()}{setGraphTypeToRead()}}
+{\footnotesize\ttfamily void request\+::set\+Graph\+Type\+To\+Read (\begin{DoxyParamCaption}\item[{int}]{graph\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Sets the graph type to read complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+\_\+type} & the graph type to read \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classrequest_aeeee43e9d8498f6315966f576ce20dc1}\label{classrequest_aeeee43e9d8498f6315966f576ce20dc1} 
+\index{request@{request}!csvReader@{csvReader}}
+\index{csvReader@{csvReader}!request@{request}}
+\doxysubsubsection{\texorpdfstring{csvReader}{csvReader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcsv__reader}{csv\+\_\+reader}} request\+::csv\+Reader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrequest_af6ae408dcb22585f1ddd9aa192aa14fa}\label{classrequest_af6ae408dcb22585f1ddd9aa192aa14fa} 
+\index{request@{request}!edges@{edges}}
+\index{edges@{edges}!request@{request}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, double$>$ request\+::edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrequest_ada91dc3ca38c296fd14ada5aff5ff964}\label{classrequest_ada91dc3ca38c296fd14ada5aff5ff964} 
+\index{request@{request}!graph\_type@{graph\_type}}
+\index{graph\_type@{graph\_type}!request@{request}}
+\doxysubsubsection{\texorpdfstring{graph\_type}{graph\_type}}
+{\footnotesize\ttfamily int request\+::graph\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrequest_ae3b09b211c93e9bdc7ea2523ef28b442}\label{classrequest_ae3b09b211c93e9bdc7ea2523ef28b442} 
+\index{request@{request}!graph\_type\_to\_read@{graph\_type\_to\_read}}
+\index{graph\_type\_to\_read@{graph\_type\_to\_read}!request@{request}}
+\doxysubsubsection{\texorpdfstring{graph\_type\_to\_read}{graph\_type\_to\_read}}
+{\footnotesize\ttfamily int request\+::graph\+\_\+type\+\_\+to\+\_\+read\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrequest_a57f65703c1f9b452b4cdb064ac68dca1}\label{classrequest_a57f65703c1f9b452b4cdb064ac68dca1} 
+\index{request@{request}!number\_of\_nodes@{number\_of\_nodes}}
+\index{number\_of\_nodes@{number\_of\_nodes}!request@{request}}
+\doxysubsubsection{\texorpdfstring{number\_of\_nodes}{number\_of\_nodes}}
+{\footnotesize\ttfamily int request\+::number\+\_\+of\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrequest_ad704bbe35ec7d283802933546c32acdc}\label{classrequest_ad704bbe35ec7d283802933546c32acdc} 
+\index{request@{request}!real\_world\_nodes@{real\_world\_nodes}}
+\index{real\_world\_nodes@{real\_world\_nodes}!request@{request}}
+\doxysubsubsection{\texorpdfstring{real\_world\_nodes}{real\_world\_nodes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classnode}{node}}$>$ request\+::real\+\_\+world\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{request_8h}{request.\+h}}\item 
+\mbox{\hyperlink{request_8cpp}{request.\+cpp}}\end{DoxyCompactItemize}

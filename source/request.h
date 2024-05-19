@@ -1,7 +1,3 @@
-//
-// Created by rodri on 14/05/2024.
-//
-
 #ifndef PROJETO_DA_2_REQUEST_H
 #define PROJETO_DA_2_REQUEST_H
 

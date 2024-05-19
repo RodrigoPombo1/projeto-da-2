@@ -1,0 +1,71 @@
+\doxysection{request.\+h}
+\hypertarget{request_8h_source}{}\label{request_8h_source}\mbox{\hyperlink{request_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_DA\_2\_REQUEST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_DA\_2\_REQUEST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv__reader_8h}{csv\_reader.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node_8h}{node.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <climits>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrequest}{request}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ for\ the\ priority\ queue\ inside\ the\ primMST}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrequest_1_1compare}{compare}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structrequest_1_1compare_a974b40a5fa0253940fb001ccc1a0d443}{operator()}}(\textcolor{keyword}{const}\ std::pair<int,\ double>\&\ p1,\ \textcolor{keyword}{const}\ std::pair<int,\ double>\&\ p2)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ p1.second\ >\ p2.second;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classcsv__reader}{csv\_reader}}\ \mbox{\hyperlink{classrequest_aeeee43e9d8498f6315966f576ce20dc1}{csvReader}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_ada91dc3ca38c296fd14ada5aff5ff964}{graph\_type}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_ae3b09b211c93e9bdc7ea2523ef28b442}{graph\_type\_to\_read}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_a57f65703c1f9b452b4cdb064ac68dca1}{number\_of\_nodes}};\ \textcolor{comment}{//\ the\ max\ id\ of\ the\ nodes}}
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<node>\ \mbox{\hyperlink{classrequest_ad704bbe35ec7d283802933546c32acdc}{real\_world\_nodes}};}
+\DoxyCodeLine{00031\ \ \ \ \ std::unordered\_map<std::string,\ double>\ \mbox{\hyperlink{classrequest_af6ae408dcb22585f1ddd9aa192aa14fa}{edges}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ common\ to\ all\ algorithms}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrequest_aa9b1dbd961d773c5937246fd2e5a6ae0}{distance}}(\textcolor{keywordtype}{int}\ node1\_id,\ \textcolor{keywordtype}{int}\ node2\_id);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrequest_a405be17727a6fb09139d50f97c40ec3a}{calculate\_distance\_between\_two\_nodes}}(\mbox{\hyperlink{classnode}{node}}\ node1,\ \mbox{\hyperlink{classnode}{node}}\ node2);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ recursive\ backtracking}}
+\DoxyCodeLine{00038\ \ \ \ \ std::pair<double,\ std::vector<int>>\ \mbox{\hyperlink{classrequest_a150249b7ef65bab42d2e1a94e990ece9}{recursive\_backtracking\_start}}(\textcolor{keywordtype}{int}\ starting\_node\ =\ 0);}
+\DoxyCodeLine{00039\ \ \ \ \ std::pair<double,\ std::vector<int>>\ \mbox{\hyperlink{classrequest_abc19b384e3c202ff35a3e715b7a411fe}{recursive\_backtracking}}(\textcolor{keywordtype}{int}\ previous\_node,\ std::vector<std::pair<int,\ bool>>\ nodes\_not\_used\_in\_this\_path,\ \textcolor{keywordtype}{int}\ starting\_node);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ common\ to\ heuristic\ algorithms}}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{classrequest_a1d986ad4c76ce7206b7cddbd003a045c}{prim\_MST}}(std::vector<std::pair<int,\ bool>>\ nodes);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrequest_aedc2df831dc4dd0c5371d78c7adddffa}{pre\_order\_walk}}(\textcolor{keywordtype}{int}\ u,\ \textcolor{keyword}{const}\ std::vector<std::vector<int>>\&\ mst,\ std::vector<bool>\&\ visited,\ std::vector<int>\&\ tour);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ greedy\ heuristic}}
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classrequest_acca9536c97c22d60749ce933511229ac}{greedy\_heuristic}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ christophides\ heuristic\ (but\ the\ minimum\ weight\ perfect\ matching\ is\ brute\ force,\ so\ it\ is\ not\ efficient\ for\ large\ graphs)}}
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classrequest_a3501d36360d3fd95ae2c21a7d2350d4b}{christofides\_heuristic}}();}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<std::pair<int,\ int>>\ \mbox{\hyperlink{classrequest_a258468e4f799898b64e11f39fa9c3aed}{minimum\_weight\_perfect\_matching\_brute\_force}}(std::vector<int>\ odd\_degree\_vertices);}
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classrequest_a071efa1f215b3a92c0fdf33cd5ddce9b}{eulerian\_tour}}(\textcolor{keywordtype}{int}\ starting\_node,\ std::vector<std::vector<int>>\ multi\_graph);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classrequest_ae49e0b00a54017889a18e955b88087f6}{request}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrequest_acad45f0fdbbf354731f8cb4a3f45d7e6}{setGraphTypeToRead}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_ada91dc3ca38c296fd14ada5aff5ff964}{graph\_type}});\ \textcolor{comment}{//\ returns\ 1\ for\ toy\ graph,\ 2\ for\ extra\ fully\ connected\ graph,\ 3\ for\ real\ world\ graph}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_a0e287e75f8e406be312dda3e996f859c}{getGraphTypeToRead}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrequest_aa2fb2f15a325bdb874f2996ee48871cb}{setGraphFile}}(\textcolor{keywordtype}{int}\ graph\_file\_index);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_a8c5e589d2bfa855cac54bf7fbcfe1932}{getGraphType}}();\ \textcolor{comment}{//\ returns\ 1\ for\ toy\ graph,\ 2\ for\ extra\ fully\ connected\ graph,\ 3\ for\ real\ world\ graph}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classrequest_aabce954e23476599157e42a69849db04}{print\_result\_backtracking}}(\textcolor{keywordtype}{int}\ starting\_node\ =\ 0);}
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classrequest_ab41b104106f47958fbd98ab12d6a4f0c}{print\_result\_greedy\_heuristic}}();}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classrequest_a387181c24d056604f5609bce39a227f5}{print\_result\_christofides\_heuristic}}();}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_DA\_2\_REQUEST\_H}}
+
+\end{DoxyCode}

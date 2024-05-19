@@ -1,0 +1,177 @@
+\doxysection{node Class Reference}
+\hypertarget{classnode}{}\label{classnode}\index{node@{node}}
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode_aa18064943f78c369deb2b5c869bef559}{node}} (int \mbox{\hyperlink{classnode_a8ceaa10e39f74fdfdae30c68a50074e2}{id}}, double \mbox{\hyperlink{classnode_a97c9a768e3ad94129185e71506ba1b60}{longitude}}, double \mbox{\hyperlink{classnode_a8165370eb543ef15facd1732fe241875}{latitude}})
+\begin{DoxyCompactList}\small\item\em Initializes the node constructor complexity\+: O(1) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classnode_adf96dc9c357afc50789632bff89e4ac6}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the ID of the node complexity\+: O(1) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classnode_a825950cd258a2c645e258764e35ec8fe}{get\+Longitude}} ()
+\begin{DoxyCompactList}\small\item\em Gets the longitude of the node complexity\+: O(1) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classnode_aafd78fcaf677a177707455eb6ee2fcf2}{get\+Latitude}} ()
+\begin{DoxyCompactList}\small\item\em Gets the latitude of the node complexity\+: O(1) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnode_a8bccf276e269dbb48a22cb8b49ce580d}{has\+Been\+Visited}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the node has been visited complexity\+: O(1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnode_a0d132450340935e24bc10eaf00508557}{set\+Visited}} (bool \mbox{\hyperlink{classnode_a113d19d2ac29af9a9f75b20a41a5cc82}{visited}})
+\begin{DoxyCompactList}\small\item\em Sets the node as visited or not visited complexity\+: O(1) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnode_ad8f10d074d8fac7ee2371b4cb06869d7}{operator==}} (const \mbox{\hyperlink{classnode}{node}} \&other) const
+\begin{DoxyCompactList}\small\item\em Defines an operator to check if two nodes are the same complexity\+: O(1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classnode_a8ceaa10e39f74fdfdae30c68a50074e2}{id}}
+\item 
+double \mbox{\hyperlink{classnode_a97c9a768e3ad94129185e71506ba1b60}{longitude}}
+\item 
+double \mbox{\hyperlink{classnode_a8165370eb543ef15facd1732fe241875}{latitude}}
+\item 
+bool \mbox{\hyperlink{classnode_a113d19d2ac29af9a9f75b20a41a5cc82}{visited}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classnode_aa18064943f78c369deb2b5c869bef559}\label{classnode_aa18064943f78c369deb2b5c869bef559} 
+\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily node\+::node (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{double}]{longitude,  }\item[{double}]{latitude }\end{DoxyParamCaption})}
+
+
+
+Initializes the node constructor complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the node \\
+\hline
+{\em longitude} & the longitude of the node \\
+\hline
+{\em latitude} & the latitude of the node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classnode_adf96dc9c357afc50789632bff89e4ac6}\label{classnode_adf96dc9c357afc50789632bff89e4ac6} 
+\index{node@{node}!getId@{getId}}
+\index{getId@{getId}!node@{node}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int node\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the ID of the node complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the ID of the node 
+\end{DoxyReturn}
+\Hypertarget{classnode_aafd78fcaf677a177707455eb6ee2fcf2}\label{classnode_aafd78fcaf677a177707455eb6ee2fcf2} 
+\index{node@{node}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!node@{node}}
+\doxysubsubsection{\texorpdfstring{getLatitude()}{getLatitude()}}
+{\footnotesize\ttfamily double node\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the latitude of the node complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the latitude of the node 
+\end{DoxyReturn}
+\Hypertarget{classnode_a825950cd258a2c645e258764e35ec8fe}\label{classnode_a825950cd258a2c645e258764e35ec8fe} 
+\index{node@{node}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!node@{node}}
+\doxysubsubsection{\texorpdfstring{getLongitude()}{getLongitude()}}
+{\footnotesize\ttfamily double node\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the longitude of the node complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the longitude of the node 
+\end{DoxyReturn}
+\Hypertarget{classnode_a8bccf276e269dbb48a22cb8b49ce580d}\label{classnode_a8bccf276e269dbb48a22cb8b49ce580d} 
+\index{node@{node}!hasBeenVisited@{hasBeenVisited}}
+\index{hasBeenVisited@{hasBeenVisited}!node@{node}}
+\doxysubsubsection{\texorpdfstring{hasBeenVisited()}{hasBeenVisited()}}
+{\footnotesize\ttfamily bool node\+::has\+Been\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the node has been visited complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+true if the node has been visited, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classnode_ad8f10d074d8fac7ee2371b4cb06869d7}\label{classnode_ad8f10d074d8fac7ee2371b4cb06869d7} 
+\index{node@{node}!operator==@{operator==}}
+\index{operator==@{operator==}!node@{node}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Defines an operator to check if two nodes are the same complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the other node to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the nodes are the same, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classnode_a0d132450340935e24bc10eaf00508557}\label{classnode_a0d132450340935e24bc10eaf00508557} 
+\index{node@{node}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!node@{node}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void node\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{visited }\end{DoxyParamCaption})}
+
+
+
+Sets the node as visited or not visited complexity\+: O(1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visited} & true if the node has been visited, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classnode_a8ceaa10e39f74fdfdae30c68a50074e2}\label{classnode_a8ceaa10e39f74fdfdae30c68a50074e2} 
+\index{node@{node}!id@{id}}
+\index{id@{id}!node@{node}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int node\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classnode_a8165370eb543ef15facd1732fe241875}\label{classnode_a8165370eb543ef15facd1732fe241875} 
+\index{node@{node}!latitude@{latitude}}
+\index{latitude@{latitude}!node@{node}}
+\doxysubsubsection{\texorpdfstring{latitude}{latitude}}
+{\footnotesize\ttfamily double node\+::latitude\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classnode_a97c9a768e3ad94129185e71506ba1b60}\label{classnode_a97c9a768e3ad94129185e71506ba1b60} 
+\index{node@{node}!longitude@{longitude}}
+\index{longitude@{longitude}!node@{node}}
+\doxysubsubsection{\texorpdfstring{longitude}{longitude}}
+{\footnotesize\ttfamily double node\+::longitude\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classnode_a113d19d2ac29af9a9f75b20a41a5cc82}\label{classnode_a113d19d2ac29af9a9f75b20a41a5cc82} 
+\index{node@{node}!visited@{visited}}
+\index{visited@{visited}!node@{node}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily bool node\+::visited\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{node_8h}{node.\+h}}\item 
+\mbox{\hyperlink{node_8cpp}{node.\+cpp}}\end{DoxyCompactItemize}

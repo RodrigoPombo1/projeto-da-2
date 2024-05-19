@@ -1,0 +1,175 @@
+\doxysection{csv\+\_\+reader Class Reference}
+\hypertarget{classcsv__reader}{}\label{classcsv__reader}\index{csv\_reader@{csv\_reader}}
+
+
+{\ttfamily \#include $<$csv\+\_\+reader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcsv__reader_a7da10862398507cb6faedd58089ae462}{csv\+\_\+reader}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the csv reader complexity\+: 0(1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcsv__reader_a8fc0fde28b1ebe485acb36032d5c49d0}{read\+\_\+toy\+\_\+graphs}} (int file\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Reads a said csv file from the toy graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcsv__reader_a38c831519876f26e47100ee5278dac83}{read\+\_\+extra\+\_\+fully\+\_\+connected\+\_\+graphs}} (int file\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Reads a said csv file from the extra fully connected graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcsv__reader_a8ec38c48c2dec789b1f4402fe2fae303}{read\+\_\+real\+\_\+world\+\_\+graphs}} (int directory\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Reads a said folder with csv files from the real world graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcsv__reader_aeef44b866e3d7b68a89f1c900ae6559c}{get\+Number\+Of\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em gets the number of nodes in the graph complexity\+: O(1) \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classnode}{node}} $>$ \mbox{\hyperlink{classcsv__reader_aeadbe56f6934d9f7b5c37fb7bcc1835d}{get\+Real\+World\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em gets a vector with the nodes of the real world graph complexity\+: O(1) \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classcsv__reader_a75d52ffa413715d993cc3ca9f32bc01a}{get\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em gets a map with the edges of the graph complexity\+: O(1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcsv__reader_a6c7da32d1dde69c99d25cded6329a3fa}{number\+\_\+of\+\_\+nodes}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classnode}{node}} $>$ \mbox{\hyperlink{classcsv__reader_ab5a5b207c7498fcd809e80392fce0279}{real\+\_\+world\+\_\+nodes}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classcsv__reader_ae347ffe3965012d5f7b952f1caab82d2}{edges}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcsv__reader_ac5551f6060dd5d194a6a94e56ea63913}{toy\+\_\+graph\+\_\+files}} = \{"{}shipping.\+csv"{}, "{}stadiums.\+csv"{}, "{}tourism.\+csv"{}\}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcsv__reader_aef567afc7e90419cabe6da2a7a7c3251}{extra\+\_\+fully\+\_\+connected\+\_\+graph\+\_\+files}} = \{"{}edges\+\_\+25.\+csv"{}, "{}edges\+\_\+50.\+csv"{}, "{}edges\+\_\+75.\+csv"{}, "{}edges\+\_\+100.\+csv"{}, "{}edges\+\_\+200.\+csv"{}, "{}edges\+\_\+300.\+csv"{}, "{}edges\+\_\+400.\+csv"{}, "{}edges\+\_\+500.\+csv"{}, "{}edges\+\_\+600.\+csv"{}, "{}edges\+\_\+700.\+csv"{}, "{}edges\+\_\+800.\+csv"{}, "{}edges\+\_\+900.\+csv"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcsv__reader_a7da10862398507cb6faedd58089ae462}\label{classcsv__reader_a7da10862398507cb6faedd58089ae462} 
+\index{csv\_reader@{csv\_reader}!csv\_reader@{csv\_reader}}
+\index{csv\_reader@{csv\_reader}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{csv\_reader()}{csv\_reader()}}
+{\footnotesize\ttfamily csv\+\_\+reader\+::csv\+\_\+reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the csv reader complexity\+: 0(1) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcsv__reader_a75d52ffa413715d993cc3ca9f32bc01a}\label{classcsv__reader_a75d52ffa413715d993cc3ca9f32bc01a} 
+\index{csv\_reader@{csv\_reader}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, double $>$ csv\+\_\+reader\+::get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets a map with the edges of the graph complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+a map with the edges of the graph 
+\end{DoxyReturn}
+\Hypertarget{classcsv__reader_aeef44b866e3d7b68a89f1c900ae6559c}\label{classcsv__reader_aeef44b866e3d7b68a89f1c900ae6559c} 
+\index{csv\_reader@{csv\_reader}!getNumberOfNodes@{getNumberOfNodes}}
+\index{getNumberOfNodes@{getNumberOfNodes}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{getNumberOfNodes()}{getNumberOfNodes()}}
+{\footnotesize\ttfamily int csv\+\_\+reader\+::get\+Number\+Of\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the number of nodes in the graph complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+the number of nodes in the graph 
+\end{DoxyReturn}
+\Hypertarget{classcsv__reader_aeadbe56f6934d9f7b5c37fb7bcc1835d}\label{classcsv__reader_aeadbe56f6934d9f7b5c37fb7bcc1835d} 
+\index{csv\_reader@{csv\_reader}!getRealWorldNodes@{getRealWorldNodes}}
+\index{getRealWorldNodes@{getRealWorldNodes}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{getRealWorldNodes()}{getRealWorldNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classnode}{node}} $>$ csv\+\_\+reader\+::get\+Real\+World\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets a vector with the nodes of the real world graph complexity\+: O(1) 
+
+\begin{DoxyReturn}{Returns}
+a vector with the nodes of the real world graph 
+\end{DoxyReturn}
+\Hypertarget{classcsv__reader_a38c831519876f26e47100ee5278dac83}\label{classcsv__reader_a38c831519876f26e47100ee5278dac83} 
+\index{csv\_reader@{csv\_reader}!read\_extra\_fully\_connected\_graphs@{read\_extra\_fully\_connected\_graphs}}
+\index{read\_extra\_fully\_connected\_graphs@{read\_extra\_fully\_connected\_graphs}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{read\_extra\_fully\_connected\_graphs()}{read\_extra\_fully\_connected\_graphs()}}
+{\footnotesize\ttfamily void csv\+\_\+reader\+::read\+\_\+extra\+\_\+fully\+\_\+connected\+\_\+graphs (\begin{DoxyParamCaption}\item[{int}]{file\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Reads a said csv file from the extra fully connected graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+index} & the index of the file to be read \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__reader_a8ec38c48c2dec789b1f4402fe2fae303}\label{classcsv__reader_a8ec38c48c2dec789b1f4402fe2fae303} 
+\index{csv\_reader@{csv\_reader}!read\_real\_world\_graphs@{read\_real\_world\_graphs}}
+\index{read\_real\_world\_graphs@{read\_real\_world\_graphs}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{read\_real\_world\_graphs()}{read\_real\_world\_graphs()}}
+{\footnotesize\ttfamily void csv\+\_\+reader\+::read\+\_\+real\+\_\+world\+\_\+graphs (\begin{DoxyParamCaption}\item[{int}]{directory\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Reads a said folder with csv files from the real world graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+\_\+index} & the index of the folder to be read \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__reader_a8fc0fde28b1ebe485acb36032d5c49d0}\label{classcsv__reader_a8fc0fde28b1ebe485acb36032d5c49d0} 
+\index{csv\_reader@{csv\_reader}!read\_toy\_graphs@{read\_toy\_graphs}}
+\index{read\_toy\_graphs@{read\_toy\_graphs}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{read\_toy\_graphs()}{read\_toy\_graphs()}}
+{\footnotesize\ttfamily void csv\+\_\+reader\+::read\+\_\+toy\+\_\+graphs (\begin{DoxyParamCaption}\item[{int}]{file\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Reads a said csv file from the toy graphs folder complexity\+: O(n\texorpdfstring{$\ast$}{*}m) (n = number of lines in the file, m = number of cells in each line) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+index} & the index of the file to be read \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcsv__reader_ae347ffe3965012d5f7b952f1caab82d2}\label{classcsv__reader_ae347ffe3965012d5f7b952f1caab82d2} 
+\index{csv\_reader@{csv\_reader}!edges@{edges}}
+\index{edges@{edges}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, double$>$ csv\+\_\+reader\+::edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcsv__reader_aef567afc7e90419cabe6da2a7a7c3251}\label{classcsv__reader_aef567afc7e90419cabe6da2a7a7c3251} 
+\index{csv\_reader@{csv\_reader}!extra\_fully\_connected\_graph\_files@{extra\_fully\_connected\_graph\_files}}
+\index{extra\_fully\_connected\_graph\_files@{extra\_fully\_connected\_graph\_files}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{extra\_fully\_connected\_graph\_files}{extra\_fully\_connected\_graph\_files}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ csv\+\_\+reader\+::extra\+\_\+fully\+\_\+connected\+\_\+graph\+\_\+files = \{"{}edges\+\_\+25.\+csv"{}, "{}edges\+\_\+50.\+csv"{}, "{}edges\+\_\+75.\+csv"{}, "{}edges\+\_\+100.\+csv"{}, "{}edges\+\_\+200.\+csv"{}, "{}edges\+\_\+300.\+csv"{}, "{}edges\+\_\+400.\+csv"{}, "{}edges\+\_\+500.\+csv"{}, "{}edges\+\_\+600.\+csv"{}, "{}edges\+\_\+700.\+csv"{}, "{}edges\+\_\+800.\+csv"{}, "{}edges\+\_\+900.\+csv"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcsv__reader_a6c7da32d1dde69c99d25cded6329a3fa}\label{classcsv__reader_a6c7da32d1dde69c99d25cded6329a3fa} 
+\index{csv\_reader@{csv\_reader}!number\_of\_nodes@{number\_of\_nodes}}
+\index{number\_of\_nodes@{number\_of\_nodes}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{number\_of\_nodes}{number\_of\_nodes}}
+{\footnotesize\ttfamily int csv\+\_\+reader\+::number\+\_\+of\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcsv__reader_ab5a5b207c7498fcd809e80392fce0279}\label{classcsv__reader_ab5a5b207c7498fcd809e80392fce0279} 
+\index{csv\_reader@{csv\_reader}!real\_world\_nodes@{real\_world\_nodes}}
+\index{real\_world\_nodes@{real\_world\_nodes}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{real\_world\_nodes}{real\_world\_nodes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classnode}{node}}$>$ csv\+\_\+reader\+::real\+\_\+world\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcsv__reader_ac5551f6060dd5d194a6a94e56ea63913}\label{classcsv__reader_ac5551f6060dd5d194a6a94e56ea63913} 
+\index{csv\_reader@{csv\_reader}!toy\_graph\_files@{toy\_graph\_files}}
+\index{toy\_graph\_files@{toy\_graph\_files}!csv\_reader@{csv\_reader}}
+\doxysubsubsection{\texorpdfstring{toy\_graph\_files}{toy\_graph\_files}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ csv\+\_\+reader\+::toy\+\_\+graph\+\_\+files = \{"{}shipping.\+csv"{}, "{}stadiums.\+csv"{}, "{}tourism.\+csv"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{csv__reader_8h}{csv\+\_\+reader.\+h}}\item 
+\mbox{\hyperlink{csv__reader_8cpp}{csv\+\_\+reader.\+cpp}}\end{DoxyCompactItemize}

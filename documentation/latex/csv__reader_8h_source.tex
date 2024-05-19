@@ -1,0 +1,36 @@
+\doxysection{csv\+\_\+reader.\+h}
+\hypertarget{csv__reader_8h_source}{}\label{csv__reader_8h_source}\mbox{\hyperlink{csv__reader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_DA\_2\_CSV\_READER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_DA\_2\_CSV\_READER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node_8h}{node.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcsv__reader}{csv\_reader}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcsv__reader_a6c7da32d1dde69c99d25cded6329a3fa}{number\_of\_nodes}};\ \textcolor{comment}{//\ the\ max\ id\ of\ the\ nodes\ (the\ real\ number\ of\ nodes\ is\ that\ +\ 1\ since\ the\ ids\ start\ at\ 0)}}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<node>\ \mbox{\hyperlink{classcsv__reader_ab5a5b207c7498fcd809e80392fce0279}{real\_world\_nodes}};}
+\DoxyCodeLine{00015\ \ \ \ \ std::unordered\_map<std::string,\ double>\ \mbox{\hyperlink{classcsv__reader_ae347ffe3965012d5f7b952f1caab82d2}{edges}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classcsv__reader_ac5551f6060dd5d194a6a94e56ea63913}{toy\_graph\_files}}\ =\ \{\textcolor{stringliteral}{"{}shipping.csv"{}},\ \textcolor{stringliteral}{"{}stadiums.csv"{}},\ \textcolor{stringliteral}{"{}tourism.csv"{}}\};}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classcsv__reader_aef567afc7e90419cabe6da2a7a7c3251}{extra\_fully\_connected\_graph\_files}}\ =\ \{\textcolor{stringliteral}{"{}edges\_25.csv"{}},\ \textcolor{stringliteral}{"{}edges\_50.csv"{}},\ \textcolor{stringliteral}{"{}edges\_75.csv"{}},\ \textcolor{stringliteral}{"{}edges\_100.csv"{}},\ \textcolor{stringliteral}{"{}edges\_200.csv"{}},\ \textcolor{stringliteral}{"{}edges\_300.csv"{}},\ \textcolor{stringliteral}{"{}edges\_400.csv"{}},\ \textcolor{stringliteral}{"{}edges\_500.csv"{}},\ \textcolor{stringliteral}{"{}edges\_600.csv"{}},\ \textcolor{stringliteral}{"{}edges\_700.csv"{}},\ \textcolor{stringliteral}{"{}edges\_800.csv"{}},\ \textcolor{stringliteral}{"{}edges\_900.csv"{}}\};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classcsv__reader_a7da10862398507cb6faedd58089ae462}{csv\_reader}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcsv__reader_a8fc0fde28b1ebe485acb36032d5c49d0}{read\_toy\_graphs}}(\textcolor{keywordtype}{int}\ file\_index);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcsv__reader_a38c831519876f26e47100ee5278dac83}{read\_extra\_fully\_connected\_graphs}}(\textcolor{keywordtype}{int}\ file\_index);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcsv__reader_a8ec38c48c2dec789b1f4402fe2fae303}{read\_real\_world\_graphs}}(\textcolor{keywordtype}{int}\ directory\_index);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcsv__reader_aeef44b866e3d7b68a89f1c900ae6559c}{getNumberOfNodes}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<node>\ \mbox{\hyperlink{classcsv__reader_aeadbe56f6934d9f7b5c37fb7bcc1835d}{getRealWorldNodes}}();}
+\DoxyCodeLine{00027\ \ \ \ \ std::unordered\_map<std::string,\ double>\ \mbox{\hyperlink{classcsv__reader_a75d52ffa413715d993cc3ca9f32bc01a}{getEdges}}();}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_DA\_2\_CSV\_READER\_H}}
+
+\end{DoxyCode}

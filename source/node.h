@@ -1,7 +1,3 @@
-//
-// Created by rodri on 17/05/2024.
-//
-
 #ifndef PROJETO_DA_2_NODE_H
 #define PROJETO_DA_2_NODE_H
 

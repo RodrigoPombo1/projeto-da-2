@@ -1,7 +1,3 @@
-//
-// Created by rodri on 14/05/2024.
-//
-
 #include "menu.h"
 
 using namespace std;
@@ -144,11 +140,14 @@ int menu::print_result_and_get_choice_input(std::string current_selection, std::
     return input;
 }
 
+/// @brief Constructor for the menu class
 menu::menu() {
     this->go_back_to_main_menu = false;
     this->first_time_running = true;
     this->csv_file_type_selection_menu();
 }
+
+/// @brief Prints options for the type of csv file to read from (between toy graphs, extra fully connected graphs and real-world graphs)
 void menu::csv_file_type_selection_menu() {
     while (this->first_time_running) {
         vector<string> options = {"Toy-Graphs", "Extra Fully Connected Graphs", "Real-world Graphs"};
@@ -202,6 +201,7 @@ void menu::csv_file_type_selection_menu() {
     }
 }
 
+/// @brief Prints options for the file to read from for each file type
 void menu::csv_file_name_selection_menu() {
     vector<string> toy_graphs_names = {"shipping.csv", "stadiums.csv", "tourism.csv"};
     vector<string> extra_fully_connected_graphs_names = {"edges_25.csv", "edges_50.csv", "edges_75.csv", "edges_100.csv", "edges_200.csv", "edges_300.csv", "edges_400.csv", "edges_500.csv", "edges_600.csv", "edges_700.csv", "edges_800.csv", "edges_900.csv"};
@@ -461,6 +461,7 @@ void menu::csv_file_name_selection_menu() {
     }
 }
 
+/// @brief Prints the main menu
 void menu::main_menu() {
     while (true) {
         this->go_back_to_main_menu = false;
@@ -492,6 +493,7 @@ void menu::main_menu() {
     }
 }
 
+/// @brief Prints the menu for selecting the starting node for the real world graph
 void menu::real_world_graph_select_starting_node() {
     while (!this->go_back_to_main_menu) {
         string current_menu = "Real World Graph - Select starting node";
@@ -509,6 +511,9 @@ void menu::real_world_graph_select_starting_node() {
     }
 }
 
+/// @brief Prints the menu selected and gets the input
+/// @param current_selection current menu selected
+/// @return input chosen
 int menu::print_menu_and_get_number_input_for_0(string current_selection) {
     int input;
     bool valid_input = false;
@@ -537,6 +542,8 @@ int menu::print_menu_and_get_number_input_for_0(string current_selection) {
     return input;
 }
 
+/// @brief Gets a solution to the tsp problem even in graphs that are not guaranteed to be fully connected (it's impossible to implement)
+/// @param input input from the user
 void menu::t2_4_real_world_graph(int input) {
     while (!this->go_back_to_main_menu) {
         string current_menu = "T2.4 Real World Graph";
@@ -555,6 +562,7 @@ void menu::t2_4_real_world_graph(int input) {
     }
 }
 
+/// @brief Gets a solution to the tsp problem using the Christofides heuristic
 void menu::t2_3_other_heuristic() {
     while (!this->go_back_to_main_menu) {
         string current_menu = "T2.3 Other Heuristic";
@@ -573,6 +581,7 @@ void menu::t2_3_other_heuristic() {
     }
 }
 
+/// @brief Gets a solution to the tsp problem using the triangular approximation heuristic
 void menu::t2_2_triangular_approximation_heuristic() {
     while (!this->go_back_to_main_menu) {
         string current_menu = "T2.2 Triangular Approximation Heuristic";
@@ -591,6 +600,7 @@ void menu::t2_2_triangular_approximation_heuristic() {
     }
 }
 
+/// @brief Gets a solution to the tsp problem using backtracking
 void menu::t2_1_backtracking() {
     while (!this->go_back_to_main_menu) {
         string current_menu = "T2.1 Backtracking";

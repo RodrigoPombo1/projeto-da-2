@@ -1,0 +1,285 @@
+\doxysection{menu Class Reference}
+\hypertarget{classmenu}{}\label{classmenu}\index{menu@{menu}}
+
+
+{\ttfamily \#include $<$menu.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmenu_ad345b60b72c4992525cf064d5642c1d9}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the menu class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmenu_a06e75b9d04183df95908f32539b05ca3}{print\+\_\+menu\+\_\+and\+\_\+get\+\_\+choice\+\_\+input}} (std\+::string current\+\_\+selection, std\+::vector$<$ std\+::string $>$ options, bool is\+\_\+main\+\_\+menu=false)
+\begin{DoxyCompactList}\small\item\em Prints current menu and gets the input corresponding to the choice from the options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmenu_af089fd88c7e6cf14a093e19acd3f8bd3}{print\+\_\+menu\+\_\+and\+\_\+get\+\_\+number\+\_\+input}} (std\+::string current\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Prints current menu and gets number input. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmenu_acfefffb776b9ce061b6f2e249e7946f0}{print\+\_\+menu\+\_\+and\+\_\+get\+\_\+string\+\_\+input}} (std\+::string current\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Prints current menu and gets string input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a5221d0ac7152baefaf1d855dda2bfec9}{print\+\_\+separator}} ()
+\begin{DoxyCompactList}\small\item\em Prints a separator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmenu_a7d07251f5add08d1435c2fb8c80598f0}{print\+\_\+result\+\_\+and\+\_\+get\+\_\+choice\+\_\+input}} (std\+::string current\+\_\+selection, std\+::vector$<$ std\+::string $>$ results)
+\begin{DoxyCompactList}\small\item\em Prints results from the request and gets choice input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmenu_ad9b0445f3cb3f6ed6f03f52ad1a15dc4}{print\+\_\+menu\+\_\+and\+\_\+get\+\_\+number\+\_\+input\+\_\+for\+\_\+0}} (std\+::string current\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Prints the menu selected and gets the input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_aa99e26ebd8a9d9c98e458b475b28f0ab}{csv\+\_\+file\+\_\+type\+\_\+selection\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Prints options for the type of csv file to read from (between toy graphs, extra fully connected graphs and real-\/world graphs) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a08ac46209a361a1bb803437981a5c6bb}{csv\+\_\+file\+\_\+name\+\_\+selection\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Prints options for the file to read from for each file type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a480092119cba5572d613ab9516c6f45c}{main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Prints the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a355eb8ba54084d7e2717b2f4d0731e37}{real\+\_\+world\+\_\+graph\+\_\+select\+\_\+starting\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em Prints the menu for selecting the starting node for the real world graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a7b0d1ef998520cf5e772bbcdd40deb6a}{t2\+\_\+4\+\_\+real\+\_\+world\+\_\+graph}} (int input)
+\begin{DoxyCompactList}\small\item\em Gets a solution to the tsp problem even in graphs that are not guaranteed to be fully connected (it\textquotesingle{}s impossible to implement) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_aa5fd742785cfba4f7813b5dc567302e6}{t2\+\_\+3\+\_\+other\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets a solution to the tsp problem using the Christofides heuristic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a5681abd527ced741ca32da6d647b088b}{t2\+\_\+2\+\_\+triangular\+\_\+approximation\+\_\+heuristic}} ()
+\begin{DoxyCompactList}\small\item\em Gets a solution to the tsp problem using the triangular approximation heuristic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenu_a935478cb95895c52997af93e223424fb}{t2\+\_\+1\+\_\+backtracking}} ()
+\begin{DoxyCompactList}\small\item\em Gets a solution to the tsp problem using backtracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classmenu_a05c48fb9a68d02b1a68e42aaf8462a68}{first\+\_\+time\+\_\+running}}
+\item 
+bool \mbox{\hyperlink{classmenu_ac33a7b40f6d71e1743f25259f091b8fc}{go\+\_\+back\+\_\+to\+\_\+main\+\_\+menu}}
+\item 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classmenu_a0a951eec65dd67f11da4580ec660bdbb}{Request}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmenu_ad345b60b72c4992525cf064d5642c1d9}\label{classmenu_ad345b60b72c4992525cf064d5642c1d9} 
+\index{menu@{menu}!menu@{menu}}
+\index{menu@{menu}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily menu\+::menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the menu class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmenu_a08ac46209a361a1bb803437981a5c6bb}\label{classmenu_a08ac46209a361a1bb803437981a5c6bb} 
+\index{menu@{menu}!csv\_file\_name\_selection\_menu@{csv\_file\_name\_selection\_menu}}
+\index{csv\_file\_name\_selection\_menu@{csv\_file\_name\_selection\_menu}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{csv\_file\_name\_selection\_menu()}{csv\_file\_name\_selection\_menu()}}
+{\footnotesize\ttfamily void menu\+::csv\+\_\+file\+\_\+name\+\_\+selection\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints options for the file to read from for each file type. 
+
+\Hypertarget{classmenu_aa99e26ebd8a9d9c98e458b475b28f0ab}\label{classmenu_aa99e26ebd8a9d9c98e458b475b28f0ab} 
+\index{menu@{menu}!csv\_file\_type\_selection\_menu@{csv\_file\_type\_selection\_menu}}
+\index{csv\_file\_type\_selection\_menu@{csv\_file\_type\_selection\_menu}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{csv\_file\_type\_selection\_menu()}{csv\_file\_type\_selection\_menu()}}
+{\footnotesize\ttfamily void menu\+::csv\+\_\+file\+\_\+type\+\_\+selection\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints options for the type of csv file to read from (between toy graphs, extra fully connected graphs and real-\/world graphs) 
+
+\Hypertarget{classmenu_a480092119cba5572d613ab9516c6f45c}\label{classmenu_a480092119cba5572d613ab9516c6f45c} 
+\index{menu@{menu}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily void menu\+::main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints the main menu. 
+
+\Hypertarget{classmenu_a06e75b9d04183df95908f32539b05ca3}\label{classmenu_a06e75b9d04183df95908f32539b05ca3} 
+\index{menu@{menu}!print\_menu\_and\_get\_choice\_input@{print\_menu\_and\_get\_choice\_input}}
+\index{print\_menu\_and\_get\_choice\_input@{print\_menu\_and\_get\_choice\_input}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_menu\_and\_get\_choice\_input()}{print\_menu\_and\_get\_choice\_input()}}
+{\footnotesize\ttfamily int menu\+::print\+\_\+menu\+\_\+and\+\_\+get\+\_\+choice\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string}]{current\+\_\+selection,  }\item[{std\+::vector$<$ std\+::string $>$}]{options,  }\item[{bool}]{is\+\_\+main\+\_\+menu = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints current menu and gets the input corresponding to the choice from the options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+selection} & current menu selected \\
+\hline
+{\em options} & vector with the diferent options in the menu \\
+\hline
+{\em is\+\_\+main\+\_\+menu} & boolean value corresponding to being the main menu or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+choice made 
+\end{DoxyReturn}
+\Hypertarget{classmenu_af089fd88c7e6cf14a093e19acd3f8bd3}\label{classmenu_af089fd88c7e6cf14a093e19acd3f8bd3} 
+\index{menu@{menu}!print\_menu\_and\_get\_number\_input@{print\_menu\_and\_get\_number\_input}}
+\index{print\_menu\_and\_get\_number\_input@{print\_menu\_and\_get\_number\_input}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_menu\_and\_get\_number\_input()}{print\_menu\_and\_get\_number\_input()}}
+{\footnotesize\ttfamily int menu\+::print\+\_\+menu\+\_\+and\+\_\+get\+\_\+number\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string}]{current\+\_\+selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints current menu and gets number input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+selection} & current menu selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number input chosen 
+\end{DoxyReturn}
+\Hypertarget{classmenu_ad9b0445f3cb3f6ed6f03f52ad1a15dc4}\label{classmenu_ad9b0445f3cb3f6ed6f03f52ad1a15dc4} 
+\index{menu@{menu}!print\_menu\_and\_get\_number\_input\_for\_0@{print\_menu\_and\_get\_number\_input\_for\_0}}
+\index{print\_menu\_and\_get\_number\_input\_for\_0@{print\_menu\_and\_get\_number\_input\_for\_0}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_menu\_and\_get\_number\_input\_for\_0()}{print\_menu\_and\_get\_number\_input\_for\_0()}}
+{\footnotesize\ttfamily int menu\+::print\+\_\+menu\+\_\+and\+\_\+get\+\_\+number\+\_\+input\+\_\+for\+\_\+0 (\begin{DoxyParamCaption}\item[{std\+::string}]{current\+\_\+selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints the menu selected and gets the input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+selection} & current menu selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input chosen 
+\end{DoxyReturn}
+\Hypertarget{classmenu_acfefffb776b9ce061b6f2e249e7946f0}\label{classmenu_acfefffb776b9ce061b6f2e249e7946f0} 
+\index{menu@{menu}!print\_menu\_and\_get\_string\_input@{print\_menu\_and\_get\_string\_input}}
+\index{print\_menu\_and\_get\_string\_input@{print\_menu\_and\_get\_string\_input}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_menu\_and\_get\_string\_input()}{print\_menu\_and\_get\_string\_input()}}
+{\footnotesize\ttfamily string menu\+::print\+\_\+menu\+\_\+and\+\_\+get\+\_\+string\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string}]{current\+\_\+selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints current menu and gets string input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+selection} & current menu selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string input chosen 
+\end{DoxyReturn}
+\Hypertarget{classmenu_a7d07251f5add08d1435c2fb8c80598f0}\label{classmenu_a7d07251f5add08d1435c2fb8c80598f0} 
+\index{menu@{menu}!print\_result\_and\_get\_choice\_input@{print\_result\_and\_get\_choice\_input}}
+\index{print\_result\_and\_get\_choice\_input@{print\_result\_and\_get\_choice\_input}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_result\_and\_get\_choice\_input()}{print\_result\_and\_get\_choice\_input()}}
+{\footnotesize\ttfamily int menu\+::print\+\_\+result\+\_\+and\+\_\+get\+\_\+choice\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string}]{current\+\_\+selection,  }\item[{std\+::vector$<$ std\+::string $>$}]{results }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints results from the request and gets choice input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+selection} & current menu selected \\
+\hline
+{\em results} & vector with the results from the request made \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input chosen 
+\end{DoxyReturn}
+\Hypertarget{classmenu_a5221d0ac7152baefaf1d855dda2bfec9}\label{classmenu_a5221d0ac7152baefaf1d855dda2bfec9} 
+\index{menu@{menu}!print\_separator@{print\_separator}}
+\index{print\_separator@{print\_separator}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{print\_separator()}{print\_separator()}}
+{\footnotesize\ttfamily void menu\+::print\+\_\+separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints a separator. 
+
+\Hypertarget{classmenu_a355eb8ba54084d7e2717b2f4d0731e37}\label{classmenu_a355eb8ba54084d7e2717b2f4d0731e37} 
+\index{menu@{menu}!real\_world\_graph\_select\_starting\_node@{real\_world\_graph\_select\_starting\_node}}
+\index{real\_world\_graph\_select\_starting\_node@{real\_world\_graph\_select\_starting\_node}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{real\_world\_graph\_select\_starting\_node()}{real\_world\_graph\_select\_starting\_node()}}
+{\footnotesize\ttfamily void menu\+::real\+\_\+world\+\_\+graph\+\_\+select\+\_\+starting\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints the menu for selecting the starting node for the real world graph. 
+
+\Hypertarget{classmenu_a935478cb95895c52997af93e223424fb}\label{classmenu_a935478cb95895c52997af93e223424fb} 
+\index{menu@{menu}!t2\_1\_backtracking@{t2\_1\_backtracking}}
+\index{t2\_1\_backtracking@{t2\_1\_backtracking}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{t2\_1\_backtracking()}{t2\_1\_backtracking()}}
+{\footnotesize\ttfamily void menu\+::t2\+\_\+1\+\_\+backtracking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets a solution to the tsp problem using backtracking. 
+
+\Hypertarget{classmenu_a5681abd527ced741ca32da6d647b088b}\label{classmenu_a5681abd527ced741ca32da6d647b088b} 
+\index{menu@{menu}!t2\_2\_triangular\_approximation\_heuristic@{t2\_2\_triangular\_approximation\_heuristic}}
+\index{t2\_2\_triangular\_approximation\_heuristic@{t2\_2\_triangular\_approximation\_heuristic}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{t2\_2\_triangular\_approximation\_heuristic()}{t2\_2\_triangular\_approximation\_heuristic()}}
+{\footnotesize\ttfamily void menu\+::t2\+\_\+2\+\_\+triangular\+\_\+approximation\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets a solution to the tsp problem using the triangular approximation heuristic. 
+
+\Hypertarget{classmenu_aa5fd742785cfba4f7813b5dc567302e6}\label{classmenu_aa5fd742785cfba4f7813b5dc567302e6} 
+\index{menu@{menu}!t2\_3\_other\_heuristic@{t2\_3\_other\_heuristic}}
+\index{t2\_3\_other\_heuristic@{t2\_3\_other\_heuristic}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{t2\_3\_other\_heuristic()}{t2\_3\_other\_heuristic()}}
+{\footnotesize\ttfamily void menu\+::t2\+\_\+3\+\_\+other\+\_\+heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets a solution to the tsp problem using the Christofides heuristic. 
+
+\Hypertarget{classmenu_a7b0d1ef998520cf5e772bbcdd40deb6a}\label{classmenu_a7b0d1ef998520cf5e772bbcdd40deb6a} 
+\index{menu@{menu}!t2\_4\_real\_world\_graph@{t2\_4\_real\_world\_graph}}
+\index{t2\_4\_real\_world\_graph@{t2\_4\_real\_world\_graph}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{t2\_4\_real\_world\_graph()}{t2\_4\_real\_world\_graph()}}
+{\footnotesize\ttfamily void menu\+::t2\+\_\+4\+\_\+real\+\_\+world\+\_\+graph (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets a solution to the tsp problem even in graphs that are not guaranteed to be fully connected (it\textquotesingle{}s impossible to implement) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input from the user \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmenu_a05c48fb9a68d02b1a68e42aaf8462a68}\label{classmenu_a05c48fb9a68d02b1a68e42aaf8462a68} 
+\index{menu@{menu}!first\_time\_running@{first\_time\_running}}
+\index{first\_time\_running@{first\_time\_running}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{first\_time\_running}{first\_time\_running}}
+{\footnotesize\ttfamily bool menu\+::first\+\_\+time\+\_\+running\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmenu_ac33a7b40f6d71e1743f25259f091b8fc}\label{classmenu_ac33a7b40f6d71e1743f25259f091b8fc} 
+\index{menu@{menu}!go\_back\_to\_main\_menu@{go\_back\_to\_main\_menu}}
+\index{go\_back\_to\_main\_menu@{go\_back\_to\_main\_menu}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{go\_back\_to\_main\_menu}{go\_back\_to\_main\_menu}}
+{\footnotesize\ttfamily bool menu\+::go\+\_\+back\+\_\+to\+\_\+main\+\_\+menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classmenu_a0a951eec65dd67f11da4580ec660bdbb}\label{classmenu_a0a951eec65dd67f11da4580ec660bdbb} 
+\index{menu@{menu}!Request@{Request}}
+\index{Request@{Request}!menu@{menu}}
+\doxysubsubsection{\texorpdfstring{Request}{Request}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequest}{request}} menu\+::\+Request\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{menu_8h}{menu.\+h}}\item 
+\mbox{\hyperlink{menu_8cpp}{menu.\+cpp}}\end{DoxyCompactItemize}

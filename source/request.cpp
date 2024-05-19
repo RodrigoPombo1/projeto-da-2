@@ -1,18 +1,22 @@
-//
-// Created by rodri on 14/05/2024.
-//
-
 #include "request.h"
 
 using namespace std;
 
+/// @brief Initializes the request constructor
+/// complexity: O(1)
 request::request() {
 }
 
+/// @brief Sets the graph type to read
+/// complexity: O(1)
+/// @param graph_type the graph type to read
 void request::setGraphTypeToRead(int graph_type) {
     this->graph_type_to_read = graph_type;
 }
 
+/// @brief Sets the graph file
+/// complexity: O(1)
+/// @param graph_file_index the graph file index
 void request::setGraphFile(int graph_file_index) {
     switch (graph_type_to_read) {
         case 1:
@@ -37,14 +41,25 @@ void request::setGraphFile(int graph_file_index) {
     }
 }
 
+/// @brief Gets the graph type
+/// complexity: O(1)
+/// @return the graph type
 int request::getGraphType() {
     return this->graph_type;
 }
 
+/// @brief Gets the graph type to read
+/// complexity: O(1)
+/// @return the graph type to read
 int request::getGraphTypeToRead() {
     return this->graph_type_to_read;
 }
 
+/// @brief Gets the distance between two nodes
+/// complexity: O(1)
+/// @param node1_id the ID of the first node
+/// @param node2_id the ID of the second node
+/// @return the distance between the two nodes
 double request::distance(int node1_id, int node2_id) {
     string edge_code;
     if (node1_id < node2_id) {
@@ -62,6 +77,11 @@ double request::distance(int node1_id, int node2_id) {
     return -1; // caso em que é para considerar distancia infinita
 }
 
+/// @brief Calculates the distance between two nodes
+/// complexity: O(1)
+/// @param node1 the first node
+/// @param node2 the second node
+/// @return the distance between the two nodes
 double request::calculate_distance_between_two_nodes(node node1, node node2) {
     double lat1 = node1.getLatitude();
     double lon1 = node1.getLongitude();
@@ -83,6 +103,10 @@ double request::calculate_distance_between_two_nodes(node node1, node node2) {
     return rad * c;
 }
 
+/// @brief Gets the result of the recursive backtracking algorithm from a starting node
+/// complexity: O(n!) (n = number of nodes)
+/// @param starting_node the starting node
+/// @return the result of the recursive backtracking algorithm
 std::pair<double, std::vector<int>> request::recursive_backtracking_start(int starting_node) {
     vector<pair<int, bool>> nodes_id_not_used_in_this_path;
     for (int i = 0; i < this->number_of_nodes; i++) {
@@ -96,6 +120,12 @@ std::pair<double, std::vector<int>> request::recursive_backtracking_start(int st
     return recursive_backtracking(starting_node, nodes_id_not_used_in_this_path, starting_node);
 }
 
+/// @brief Recursive backtracking algorithm to find the shortest path
+/// complexity: O(n!) (n = number of nodes)
+/// @param previous_node the previous node
+/// @param nodes the nodes not used in this path
+/// @param starting_node the starting node
+/// @return the shortest path
 std::pair<double, std::vector<int>> request::recursive_backtracking(int previous_node, vector<pair<int, bool>> nodes, int starting_node) {
     vector<pair<double, vector<int>>> vector_distances_and_their_paths;
     // connect to all nodes not used in this path
@@ -147,6 +177,10 @@ std::pair<double, std::vector<int>> request::recursive_backtracking(int previous
     return min_distance_and_path;
 }
 
+/// @brief Gets the written result of the recursive backtracking algorithm from a starting node
+/// complexity: O(n!) (n = number of nodes)
+/// @param starting_node the starting node
+/// @return the written result of the recursive backtracking algorithm
 std::vector<std::string> request::print_result_backtracking(int starting_node) {
     pair<double, vector<int>> result = recursive_backtracking_start(starting_node);
     if (result.first == -1) {
@@ -161,7 +195,10 @@ std::vector<std::string> request::print_result_backtracking(int starting_node) {
     return path_string;
 }
 
-
+/// @brief Gets Minimum Spanning Tree using Prim's MST algorithm
+/// complexity: O(nlog(n)) (n = number of nodes)
+/// @param nodes the nodes to be used in the MST
+/// @return the Minimum Spanning Tree
 vector<vector<int>> request::prim_MST(vector<pair<int, bool>> nodes) {
     // initialization
     vector<double> key(this->number_of_nodes, INT_MAX);
@@ -204,6 +241,12 @@ vector<vector<int>> request::prim_MST(vector<pair<int, bool>> nodes) {
     return mst;
 }
 
+/// @brief Pre-order walk of the Minimum Spanning Tree
+/// complexity: O(n) (n = number of nodes)
+/// @param current_node the current node
+/// @param mst the Minimum Spanning Tree
+/// @param visited the visited nodes
+/// @param tour the tour
 void request::pre_order_walk(int current_node, const vector<vector<int>>& mst, vector<bool>& visited, vector<int>& tour) {
     visited[current_node] = true;
     tour.push_back(current_node);
@@ -216,6 +259,9 @@ void request::pre_order_walk(int current_node, const vector<vector<int>>& mst, v
     }
 }
 
+/// @brief Gets the result of the greedy heuristic algorithm
+/// complexity: O(nlog(n)) (n = number of nodes)
+/// @return the result of the greedy heuristic algorithm
 vector<int> request::greedy_heuristic() {
     vector<pair<int, bool>> nodes = vector<pair<int, bool>>(this->number_of_nodes, pair(0, false));
     vector<vector<int>> mst = prim_MST(nodes);
@@ -231,6 +277,9 @@ vector<int> request::greedy_heuristic() {
     return tour;
 }
 
+/// @brief Gets the written result of the greedy heuristic algorithm
+/// complexity: O(nlog(n)) (n = number of nodes)
+/// @return the written result of the greedy heuristic algorithm
 std::vector<std::string> request::print_result_greedy_heuristic() {
     vector<int> tour = greedy_heuristic();
     vector<string> tour_string;
@@ -244,6 +293,9 @@ std::vector<std::string> request::print_result_greedy_heuristic() {
     return tour_string;
 }
 
+/// @brief Gets the result of the Christofides heuristic algorithm
+/// complexity: O((n/2)!*n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time)
+/// @return the result of the Christofides heuristic algorithm
 vector<int> request::christofides_heuristic() {
     vector<pair<int, bool>> nodes = vector<pair<int, bool>>(this->number_of_nodes, pair(0, false));
     vector<vector<int>> mst = prim_MST(nodes);
@@ -272,6 +324,10 @@ vector<int> request::christofides_heuristic() {
     return result_tour_with_no_repeated_nodes;
 }
 
+/// @brief Gets the minimum weight perfect matching using brute force
+/// complexity: O((n/2)!*n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here)
+/// @param odd_degree_vertices the odd degree vertices
+/// @return the minimum weight perfect matching
 vector<pair<int, int>> request::minimum_weight_perfect_matching_brute_force(std::vector<int> odd_degree_vertices) {
     vector<pair<int, int>> result;
     double mininum_distance = INT_MAX;
@@ -293,6 +349,11 @@ vector<pair<int, int>> request::minimum_weight_perfect_matching_brute_force(std:
     return result;
 }
 
+/// @brief Gets the Eulerian tour
+/// complexity: O(n) (n = number of nodes)
+/// @param starting_node the starting node
+/// @param multi_graph the multi graph
+/// @return the Eulerian tour
 std::vector<int> request::eulerian_tour(int starting_node, std::vector<std::vector<int>> multi_graph) {
     stack<int> current_path;
     vector<int> circuit;
@@ -322,6 +383,9 @@ std::vector<int> request::eulerian_tour(int starting_node, std::vector<std::vect
     return circuit;
 }
 
+/// @brief Gets the written result of the Christofides heuristic algorithm
+/// complexity: O((n/2)!*n) (n = number of nodes)
+/// @return the written result of the Christofides heuristic algorithm
 std::vector<std::string> request::print_result_christofides_heuristic() {
     vector<int> tour = christofides_heuristic();
     vector<string> tour_string;
