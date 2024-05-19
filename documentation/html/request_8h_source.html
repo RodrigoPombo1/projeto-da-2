@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DA2324_PRJ2_G135: request.h Source File</title>
+<title>DA2324_PRJ2_G135: source/request.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,7 +51,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,6 +72,11 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">request.h</div></div>
 </div><!--header-->
@@ -156,9 +160,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassrequest_html_a0e287e75f8e406be312dda3e996f859c"><div class="ttname"><a href="classrequest.html#a0e287e75f8e406be312dda3e996f859c">request::getGraphTypeToRead</a></div><div class="ttdeci">int getGraphTypeToRead()</div><div class="ttdoc">Gets the graph type to read complexity: O(1)</div><div class="ttdef"><b>Definition</b> request.cpp:54</div></div>
 <div class="ttc" id="aclassrequest_html_a150249b7ef65bab42d2e1a94e990ece9"><div class="ttname"><a href="classrequest.html#a150249b7ef65bab42d2e1a94e990ece9">request::recursive_backtracking_start</a></div><div class="ttdeci">std::pair&lt; double, std::vector&lt; int &gt; &gt; recursive_backtracking_start(int starting_node=0)</div><div class="ttdoc">Gets the result of the recursive backtracking algorithm from a starting node complexity: O(n!...</div><div class="ttdef"><b>Definition</b> request.cpp:110</div></div>
 <div class="ttc" id="aclassrequest_html_a1d986ad4c76ce7206b7cddbd003a045c"><div class="ttname"><a href="classrequest.html#a1d986ad4c76ce7206b7cddbd003a045c">request::prim_MST</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; prim_MST(std::vector&lt; std::pair&lt; int, bool &gt; &gt; nodes)</div><div class="ttdoc">Gets Minimum Spanning Tree using Prim's MST algorithm complexity: O(nlog(n)) (n = number of nodes)</div><div class="ttdef"><b>Definition</b> request.cpp:202</div></div>
-<div class="ttc" id="aclassrequest_html_a258468e4f799898b64e11f39fa9c3aed"><div class="ttname"><a href="classrequest.html#a258468e4f799898b64e11f39fa9c3aed">request::minimum_weight_perfect_matching_brute_force</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; minimum_weight_perfect_matching_brute_force(std::vector&lt; int &gt; odd_degree_vertices)</div><div class="ttdoc">Gets the minimum weight perfect matching using brute force complexity: O((n/2)!*n) (n = number of nod...</div><div class="ttdef"><b>Definition</b> request.cpp:331</div></div>
-<div class="ttc" id="aclassrequest_html_a3501d36360d3fd95ae2c21a7d2350d4b"><div class="ttname"><a href="classrequest.html#a3501d36360d3fd95ae2c21a7d2350d4b">request::christofides_heuristic</a></div><div class="ttdeci">std::vector&lt; int &gt; christofides_heuristic()</div><div class="ttdoc">Gets the result of the Christofides heuristic algorithm complexity: O((n/2)!*n) (n = number of nodes)...</div><div class="ttdef"><b>Definition</b> request.cpp:299</div></div>
-<div class="ttc" id="aclassrequest_html_a387181c24d056604f5609bce39a227f5"><div class="ttname"><a href="classrequest.html#a387181c24d056604f5609bce39a227f5">request::print_result_christofides_heuristic</a></div><div class="ttdeci">std::vector&lt; std::string &gt; print_result_christofides_heuristic()</div><div class="ttdoc">Gets the written result of the Christofides heuristic algorithm complexity: O((n/2)!...</div><div class="ttdef"><b>Definition</b> request.cpp:389</div></div>
+<div class="ttc" id="aclassrequest_html_a258468e4f799898b64e11f39fa9c3aed"><div class="ttname"><a href="classrequest.html#a258468e4f799898b64e11f39fa9c3aed">request::minimum_weight_perfect_matching_brute_force</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; minimum_weight_perfect_matching_brute_force(std::vector&lt; int &gt; odd_degree_vertices)</div><div class="ttdoc">Gets the minimum weight perfect matching using brute force complexity: O(n!) (n = number of nodes) (t...</div><div class="ttdef"><b>Definition</b> request.cpp:331</div></div>
+<div class="ttc" id="aclassrequest_html_a3501d36360d3fd95ae2c21a7d2350d4b"><div class="ttname"><a href="classrequest.html#a3501d36360d3fd95ae2c21a7d2350d4b">request::christofides_heuristic</a></div><div class="ttdeci">std::vector&lt; int &gt; christofides_heuristic()</div><div class="ttdoc">Gets the result of the Christofides heuristic algorithm complexity: O(n!) (n = number of nodes) (the ...</div><div class="ttdef"><b>Definition</b> request.cpp:299</div></div>
+<div class="ttc" id="aclassrequest_html_a387181c24d056604f5609bce39a227f5"><div class="ttname"><a href="classrequest.html#a387181c24d056604f5609bce39a227f5">request::print_result_christofides_heuristic</a></div><div class="ttdeci">std::vector&lt; std::string &gt; print_result_christofides_heuristic()</div><div class="ttdoc">Gets the written result of the Christofides heuristic algorithm complexity: O(n!) (n = number of node...</div><div class="ttdef"><b>Definition</b> request.cpp:389</div></div>
 <div class="ttc" id="aclassrequest_html_a405be17727a6fb09139d50f97c40ec3a"><div class="ttname"><a href="classrequest.html#a405be17727a6fb09139d50f97c40ec3a">request::calculate_distance_between_two_nodes</a></div><div class="ttdeci">double calculate_distance_between_two_nodes(node node1, node node2)</div><div class="ttdoc">Calculates the distance between two nodes complexity: O(1)</div><div class="ttdef"><b>Definition</b> request.cpp:85</div></div>
 <div class="ttc" id="aclassrequest_html_a57f65703c1f9b452b4cdb064ac68dca1"><div class="ttname"><a href="classrequest.html#a57f65703c1f9b452b4cdb064ac68dca1">request::number_of_nodes</a></div><div class="ttdeci">int number_of_nodes</div><div class="ttdef"><b>Definition</b> request.h:29</div></div>
 <div class="ttc" id="aclassrequest_html_a8c5e589d2bfa855cac54bf7fbcfe1932"><div class="ttname"><a href="classrequest.html#a8c5e589d2bfa855cac54bf7fbcfe1932">request::getGraphType</a></div><div class="ttdeci">int getGraphType()</div><div class="ttdoc">Gets the graph type complexity: O(1)</div><div class="ttdef"><b>Definition</b> request.cpp:47</div></div>

@@ -27,7 +27,7 @@ std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_aabce954e234765
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_ab41b104106f47958fbd98ab12d6a4f0c}{print\+\_\+result\+\_\+greedy\+\_\+heuristic}} ()
 \begin{DoxyCompactList}\small\item\em Gets the written result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrequest_a387181c24d056604f5609bce39a227f5}{print\+\_\+result\+\_\+christofides\+\_\+heuristic}} ()
-\begin{DoxyCompactList}\small\item\em Gets the written result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the written result of the Christofides heuristic algorithm complexity\+: O(n!) (n = number of nodes) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,9 +46,9 @@ void \mbox{\hyperlink{classrequest_aedc2df831dc4dd0c5371d78c7adddffa}{pre\+\_\+o
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_acca9536c97c22d60749ce933511229ac}{greedy\+\_\+heuristic}} ()
 \begin{DoxyCompactList}\small\item\em Gets the result of the greedy heuristic algorithm complexity\+: O(nlog(n)) (n = number of nodes) \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_a3501d36360d3fd95ae2c21a7d2350d4b}{christofides\+\_\+heuristic}} ()
-\begin{DoxyCompactList}\small\item\em Gets the result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the result of the Christofides heuristic algorithm complexity\+: O(n!) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{classrequest_a258468e4f799898b64e11f39fa9c3aed}{minimum\+\_\+weight\+\_\+perfect\+\_\+matching\+\_\+brute\+\_\+force}} (std\+::vector$<$ int $>$ odd\+\_\+degree\+\_\+vertices)
-\begin{DoxyCompactList}\small\item\em Gets the minimum weight perfect matching using brute force complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gets the minimum weight perfect matching using brute force complexity\+: O(n!) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classrequest_a071efa1f215b3a92c0fdf33cd5ddce9b}{eulerian\+\_\+tour}} (int starting\+\_\+node, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ multi\+\_\+graph)
 \begin{DoxyCompactList}\small\item\em Gets the Eulerian tour complexity\+: O(n) (n = number of nodes) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
@@ -110,7 +110,7 @@ the distance between the two nodes
 
 
 
-Gets the result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) 
+Gets the result of the Christofides heuristic algorithm complexity\+: O(n!) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) 
 
 \begin{DoxyReturn}{Returns}
 the result of the Christofides heuristic algorithm 
@@ -202,7 +202,7 @@ the result of the greedy heuristic algorithm
 
 
 
-Gets the minimum weight perfect matching using brute force complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) 
+Gets the minimum weight perfect matching using brute force complexity\+: O(n!) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn\textquotesingle{}t implemented here) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -277,7 +277,7 @@ the written result of the recursive backtracking algorithm
 
 
 
-Gets the written result of the Christofides heuristic algorithm complexity\+: O((n/2)!\texorpdfstring{$\ast$}{*}n) (n = number of nodes) 
+Gets the written result of the Christofides heuristic algorithm complexity\+: O(n!) (n = number of nodes) 
 
 \begin{DoxyReturn}{Returns}
 the written result of the Christofides heuristic algorithm 
@@ -408,5 +408,5 @@ Sets the graph type to read complexity\+: O(1)
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{request_8h}{request.\+h}}\item 
-\mbox{\hyperlink{request_8cpp}{request.\+cpp}}\end{DoxyCompactItemize}
+source/\mbox{\hyperlink{request_8h}{request.\+h}}\item 
+source/\mbox{\hyperlink{request_8cpp}{request.\+cpp}}\end{DoxyCompactItemize}

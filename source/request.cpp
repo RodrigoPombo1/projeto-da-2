@@ -294,7 +294,7 @@ std::vector<std::string> request::print_result_greedy_heuristic() {
 }
 
 /// @brief Gets the result of the Christofides heuristic algorithm
-/// complexity: O((n/2)!*n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time)
+/// complexity: O(n!) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time)
 /// @return the result of the Christofides heuristic algorithm
 vector<int> request::christofides_heuristic() {
     vector<pair<int, bool>> nodes = vector<pair<int, bool>>(this->number_of_nodes, pair(0, false));
@@ -325,7 +325,7 @@ vector<int> request::christofides_heuristic() {
 }
 
 /// @brief Gets the minimum weight perfect matching using brute force
-/// complexity: O((n/2)!*n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here)
+/// complexity: O(n!) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here)
 /// @param odd_degree_vertices the odd degree vertices
 /// @return the minimum weight perfect matching
 vector<pair<int, int>> request::minimum_weight_perfect_matching_brute_force(std::vector<int> odd_degree_vertices) {
@@ -384,7 +384,7 @@ std::vector<int> request::eulerian_tour(int starting_node, std::vector<std::vect
 }
 
 /// @brief Gets the written result of the Christofides heuristic algorithm
-/// complexity: O((n/2)!*n) (n = number of nodes)
+/// complexity: O(n!) (n = number of nodes)
 /// @return the written result of the Christofides heuristic algorithm
 std::vector<std::string> request::print_result_christofides_heuristic() {
     vector<int> tour = christofides_heuristic();

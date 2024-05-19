@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab41b104106f47958fbd98ab12d6a4f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the written result of the greedy heuristic algorithm complexity: O(nlog(n)) (n = number of nodes)  <br /></td></tr>
 <tr class="separator:ab41b104106f47958fbd98ab12d6a4f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a387181c24d056604f5609bce39a227f5" id="r_a387181c24d056604f5609bce39a227f5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrequest.html#a387181c24d056604f5609bce39a227f5">print_result_christofides_heuristic</a> ()</td></tr>
-<tr class="memdesc:a387181c24d056604f5609bce39a227f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the written result of the Christofides heuristic algorithm complexity: O((n/2)!*n) (n = number of nodes)  <br /></td></tr>
+<tr class="memdesc:a387181c24d056604f5609bce39a227f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the written result of the Christofides heuristic algorithm complexity: O(n!) (n = number of nodes)  <br /></td></tr>
 <tr class="separator:a387181c24d056604f5609bce39a227f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -137,10 +137,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:acca9536c97c22d60749ce933511229ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the result of the greedy heuristic algorithm complexity: O(nlog(n)) (n = number of nodes)  <br /></td></tr>
 <tr class="separator:acca9536c97c22d60749ce933511229ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3501d36360d3fd95ae2c21a7d2350d4b" id="r_a3501d36360d3fd95ae2c21a7d2350d4b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrequest.html#a3501d36360d3fd95ae2c21a7d2350d4b">christofides_heuristic</a> ()</td></tr>
-<tr class="memdesc:a3501d36360d3fd95ae2c21a7d2350d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the result of the Christofides heuristic algorithm complexity: O((n/2)!*n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time)  <br /></td></tr>
+<tr class="memdesc:a3501d36360d3fd95ae2c21a7d2350d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the result of the Christofides heuristic algorithm complexity: O(n!) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time)  <br /></td></tr>
 <tr class="separator:a3501d36360d3fd95ae2c21a7d2350d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a258468e4f799898b64e11f39fa9c3aed" id="r_a258468e4f799898b64e11f39fa9c3aed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrequest.html#a258468e4f799898b64e11f39fa9c3aed">minimum_weight_perfect_matching_brute_force</a> (std::vector&lt; int &gt; odd_degree_vertices)</td></tr>
-<tr class="memdesc:a258468e4f799898b64e11f39fa9c3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the minimum weight perfect matching using brute force complexity: O((n/2)!*n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here)  <br /></td></tr>
+<tr class="memdesc:a258468e4f799898b64e11f39fa9c3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the minimum weight perfect matching using brute force complexity: O(n!) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here)  <br /></td></tr>
 <tr class="separator:a258468e4f799898b64e11f39fa9c3aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a071efa1f215b3a92c0fdf33cd5ddce9b" id="r_a071efa1f215b3a92c0fdf33cd5ddce9b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrequest.html#a071efa1f215b3a92c0fdf33cd5ddce9b">eulerian_tour</a> (int starting_node, std::vector&lt; std::vector&lt; int &gt; &gt; multi_graph)</td></tr>
 <tr class="memdesc:a071efa1f215b3a92c0fdf33cd5ddce9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Eulerian tour complexity: O(n) (n = number of nodes)  <br /></td></tr>
@@ -251,7 +251,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the result of the Christofides heuristic algorithm complexity: O((n/2)!*n) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) </p>
+<p>Gets the result of the Christofides heuristic algorithm complexity: O(n!) (n = number of nodes) (the christofides heuristic algorithm is inefficient because of the minimum weight perfect matching brute force that could be done instead in polynomial time) </p>
 <dl class="section return"><dt>Returns</dt><dd>the result of the Christofides heuristic algorithm </dd></dl>
 
 </div>
@@ -440,7 +440,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the minimum weight perfect matching using brute force complexity: O((n/2)!*n) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here) </p>
+<p>Gets the minimum weight perfect matching using brute force complexity: O(n!) (n = number of nodes) (there is a polynomial time algorithm that is better for this problem but it wasn't implemented here) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">odd_degree_vertices</td><td>the odd degree vertices </td></tr>
@@ -587,7 +587,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the written result of the Christofides heuristic algorithm complexity: O((n/2)!*n) (n = number of nodes) </p>
+<p>Gets the written result of the Christofides heuristic algorithm complexity: O(n!) (n = number of nodes) </p>
 <dl class="section return"><dt>Returns</dt><dd>the written result of the Christofides heuristic algorithm </dd></dl>
 
 </div>
@@ -886,8 +886,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="request_8h_source.html">request.h</a></li>
-<li><a class="el" href="request_8cpp.html">request.cpp</a></li>
+<li>source/<a class="el" href="request_8h_source.html">request.h</a></li>
+<li>source/<a class="el" href="request_8cpp.html">request.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
